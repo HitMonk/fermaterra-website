@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fermaterra Biotech</title>
+    <style>
+        /* This CSS makes the site look professional */
+        body, html { margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            height: 100vh; /* Full screen height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            color: white;
+        }
+        .hero video {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.6); /* Darkens video so text pops */
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .btn {
+            background: white; color: #333; padding: 15px 35px;
+            text-decoration: none; border-radius: 50px; font-weight: bold;
+            transition: transform 0.2s; display: inline-block;
+        }
+        .btn:hover { transform: scale(1.05); }
+
+        /* VISION SECTION */
+        .vision {
+            background-color: #F0F5E9; /* That specific beige color */
+            color: #2F4F2F;
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .vision-left { flex: 1; text-align: center; min-width: 300px; }
+        .vision-left h2 { font-size: 3rem; margin: 0; color: #3A5F3B; }
+        .vision-right { 
+            flex: 1; min-width: 300px; max-width: 600px; 
+            font-size: 1.2rem; line-height: 1.6; 
+            border-left: 3px solid #3A5F3B; padding-left: 30px; 
+        }
+
+        /* TECHNOLOGY LIST (Based on your saved info) */
+        .tech { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { padding: 20px; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .card h3 { color: #2F4F2F; border-bottom: 2px solid #a3cfa3; padding-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        <div>
+            <h1>Revolutionizing Agriculture with<br>AI-Powered Biomanufacturing.</h1>
+            <a href="#vision" class="btn">Explore Our Technology</a>
+        </div>
+    </div>
+
+    <div id="vision" class="vision">
+        <div class="vision-left">
+            <h2>Vision</h2>
+            <p>WHAT DRIVES US</p>
+        </div>
+        <div class="vision-right">
+            <p>To redefine bio-manufacturing through AI and microbial intelligence for global food security. We strive to create "<strong>a world where agriculture thrives in harmony with biology.</strong>"</p>
+        </div>
+    </div>
+
+    <div class="tech">
+        <h2 style="text-align: center; color: #2F4F2F;">Our Core Technologies</h2>
+        <div class="tech-grid">
+            <div class="card">
+                <h3>PGP: Nutrition</h3>
+                <p>Nitrogen Fixation & Phosphate Solubilization for enhanced crop yield.</p>
+            </div>
+            <div class="card">
+                <h3>Biocontrol</h3>
+                <p>Antimicrobial BGCs and Lytic Enzymes (Chitinases) for pathogen defense.</p>
+            </div>
+            <div class="card">
+                <h3>Stress Relief</h3>
+                <p>ACC Deaminase and Trehalose synthesis to combat environmental stress.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
