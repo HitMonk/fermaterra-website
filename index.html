@@ -5,38 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fermaterra Biotech</title>
     <style>
-
-        body, html { margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        /* GLOBAL STYLES */
+        body, html { margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; scroll-behavior: smooth; }
         
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 100; /* Ensures logo sits ON TOP of the video */
-            width: 200px; /* Adjust this number to make logo bigger/smaller */
-            background: rgba(255, 255, 255, 0.9); /* Adds a slight white box so logo is readable */
-            padding: 10px;
-            border-radius: 8px;
+        /* NAVIGATION BAR */
+        .navbar {
+            position: absolute; /* Sits on top of video */
+            top: 0; left: 0; width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); /* Fade effect */
         }
+        .navbar img { height: 60px; background: rgba(255,255,255,0.9); padding: 5px; border-radius: 5px; }
+        .nav-links a {
+            color: white; text-decoration: none;
+            margin-left: 30px; font-weight: bold; font-size: 1.1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: #a3cfa3; }
 
         /* HERO SECTION */
         .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-            color: white;
+            position: relative; height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; overflow: hidden; color: white;
         }
         .hero video {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
-            z-index: -1;
-            filter: brightness(0.6);
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; z-index: -1; filter: brightness(0.6);
         }
         .hero h1 { font-size: 3.5rem; margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
         .btn {
@@ -48,13 +49,8 @@
 
         /* VISION SECTION */
         .vision {
-            background-color: #F0F5E9;
-            color: #2F4F2F;
-            padding: 80px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+            background-color: #F0F5E9; color: #2F4F2F; padding: 80px 20px;
+            display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
         }
         .vision-left { flex: 1; text-align: center; min-width: 300px; }
         .vision-left h2 { font-size: 3rem; margin: 0; color: #3A5F3B; }
@@ -64,16 +60,32 @@
             border-left: 3px solid #3A5F3B; padding-left: 30px; 
         }
 
-        /* TECHNOLOGY LIST */
+        /* TECH LINKS */
         .tech { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
         .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { padding: 20px; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .card h3 { color: #2F4F2F; border-bottom: 2px solid #a3cfa3; padding-bottom: 10px; }
+        
+        /* CLICKABLE CARDS */
+        .card-link { text-decoration: none; color: inherit; display: block; }
+        .card { 
+            padding: 20px; border: 1px solid #eee; border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s;
+            height: 100%; background: white;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: #a3cfa3; }
+        .card h3 { color: #2F4F2F; border-bottom: 2px solid #a3cfa3; padding-bottom: 10px; margin-top: 0; }
+        .card p { color: #555; line-height: 1.5; }
     </style>
 </head>
 <body>
 
-    <img src="logo.png" alt="Fermaterra Logo" class="logo">
+    <nav class="navbar">
+        <a href="index.html"><img src="logo.png" alt="Fermaterra Logo"></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="technology.html">Technology</a>
+            <a href="products.html">Products</a>
+        </div>
+    </nav>
 
     <div class="hero">
         <video autoplay muted loop playsinline>
@@ -81,7 +93,7 @@
         </video>
         <div>
             <h1>Revolutionizing Agriculture with<br>AI-Powered Biomanufacturing.</h1>
-            <a href="#vision" class="btn">Explore Our Technology</a>
+            <a href="technology.html" class="btn">Explore Our Technology</a>
         </div>
     </div>
 
@@ -96,20 +108,30 @@
     </div>
 
     <div class="tech">
-        <h2 style="text-align: center; color: #2F4F2F;">Our Core Technologies</h2>
+        <h2 style="text-align: center; color: #2F4F2F;">Our Core Solutions</h2>
         <div class="tech-grid">
-            <div class="card">
-                <h3>PGP: Nutrition</h3>
-                <p>Nitrogen Fixation & Phosphate Solubilization for enhanced crop yield.</p>
-            </div>
-            <div class="card">
-                <h3>Biocontrol</h3>
-                <p>Antimicrobial BGCs and Lytic Enzymes (Chitinases) for pathogen defense.</p>
-            </div>
-            <div class="card">
-                <h3>Stress Relief</h3>
-                <p>ACC Deaminase and Trehalose synthesis to combat environmental stress.</p>
-            </div>
+            
+            <a href="products.html" class="card-link">
+                <div class="card">
+                    <h3>PGP: Nutrition</h3>
+                    <p>Nitrogen Fixation & Phosphate Solubilization for enhanced crop yield.</p>
+                </div>
+            </a>
+
+            <a href="products.html" class="card-link">
+                <div class="card">
+                    <h3>Biocontrol</h3>
+                    <p>Antimicrobial BGCs and Lytic Enzymes (Chitinases) for pathogen defense.</p>
+                </div>
+            </a>
+
+            <a href="products.html" class="card-link">
+                <div class="card">
+                    <h3>Stress Relief</h3>
+                    <p>ACC Deaminase and Trehalose synthesis to combat environmental stress.</p>
+                </div>
+            </a>
+
         </div>
     </div>
 
