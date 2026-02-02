@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Fermaterra</title>
+    <style>
+        body, html { margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; }
+        
+        .navbar {
+            background-color: #2F4F2F; padding: 15px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .navbar img { height: 50px; background: rgba(255,255,255,0.9); padding: 5px; border-radius: 5px; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 30px; font-weight: bold; }
+        
+        .page-header { background: #2F4F2F; color: white; padding: 60px 20px; text-align: center; }
+        
+        .product-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px; max-width: 1000px; margin: 60px auto; padding: 0 20px;
+        }
+        .product-card { 
+            border: 1px solid #eee; border-radius: 10px; overflow: hidden; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s;
+        }
+        .product-card:hover { transform: translateY(-5px); }
+        .p-header { background: #F0F5E9; padding: 20px; border-bottom: 2px solid #a3cfa3; }
+        .p-header h2 { margin: 0; color: #2F4F2F; }
+        .p-body { padding: 20px; }
+        .p-body ul { padding-left: 20px; color: #555; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html"><img src="logo.png" alt="Fermaterra Logo"></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="technology.html">Technology</a>
+            <a href="products.html">Products</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Product Solutions</h1>
+        <p>Sustainable Bio-Inputs for Modern Agriculture</p>
+    </div>
+
+    <div class="product-grid">
+        
+        <div class="product-card">
+            <div class="p-header"><h2>PGP: Nutrition</h2></div>
+            <div class="p-body">
+                <p>Enhancing nutrient availability through microbial solubilization.</p>
+                <ul>
+                    <li><strong>Nitrogen:</strong> Fixation, Nitrification, Denitrification support.</li>
+                    <li><strong>Phosphate:</strong> P-solubilization (GCD) and Phosphonates.</li>
+                    <li><strong>Potassium:</strong> K-solubilization for root uptake.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="p-header"><h2>Biocontrol Agents</h2></div>
+            <div class="p-body">
+                <p>Defense mechanisms derived from Antimicrobial BGCs.</p>
+                <ul>
+                    <li><strong>Lytic Enzymes:</strong> Chitinases & Glucanases for pathogen wall degradation.</li>
+                    <li><strong>Competition:</strong> Siderophores & HCN production.</li>
+                    <li><strong>Targeted Action:</strong> Bacteriocins & NRPS/PKS logic.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="p-header"><h2>Stress Relief</h2></div>
+            <div class="p-body">
+                <p>Helping crops survive drought, salinity, and temperature shock.</p>
+                <ul>
+                    <li><strong>Hormones:</strong> IAA, Cytokinins, Gibberellins.</li>
+                    <li><strong>Enzymes:</strong> ACC Deaminase for stress reduction.</li>
+                    <li><strong>Metabolites:</strong> Trehalose synthesis & Proline accumulation.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
